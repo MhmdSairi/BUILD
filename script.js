@@ -52,6 +52,13 @@ const toggleSearchBar = () => {
   document.body.classList.toggle("show-mobile-search");
 };
 
+let views = localStorage.getItem("aboutifyri_views") || 0;
+views++;
+localStorage.setItem("aboutifyri_views", views);
+
+document.getElementById("viewCount").textContent =
+  Number(views).toLocaleString();
+
 searchButton.addEventListener("click", toggleSearchBar);
 searchBackButton.addEventListener("click", () => searchButton.click());
 
