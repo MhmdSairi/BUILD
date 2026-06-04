@@ -46,6 +46,60 @@ const toggleSearchBar = () => {
   document.body.classList.toggle("show-mobile-search");
 };
 
+// Blok klik kanan
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+// Blok drag gambar
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+});
+
+// Blok copy
+document.addEventListener("copy", function(e) {
+    e.preventDefault();
+});
+
+// Blok cut
+document.addEventListener("cut", function(e) {
+    e.preventDefault();
+});
+
+// Blok select text
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+});
+
+// Blok beberapa shortcut umum
+document.addEventListener("keydown", function(e) {
+
+    // Ctrl+C
+    if (e.ctrlKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+    }
+
+    // Ctrl+S
+    if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+    }
+
+    // Ctrl+A
+    if (e.ctrlKey && e.key.toLowerCase() === "a") {
+        e.preventDefault();
+    }
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+});
+
 searchButton.addEventListener("click", toggleSearchBar);
 searchBackButton.addEventListener("click", () => searchButton.click());
 
