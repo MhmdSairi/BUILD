@@ -467,27 +467,43 @@ body.sidebar-hidden .main-layout .sidebar {
 }
 
 .ads-container {
+    width: 100%;
+    max-width: 420px; /* sesuaikan dengan lebar card video */
+    margin: 10px auto;
     background: linear-gradient(135deg, #ff0000, #cc0000);
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
-    margin: 15px;
-    box-shadow: 0 4px 12px rgba(255,0,0,.3);
+    box-shadow: 0 2px 8px rgba(255,0,0,.25);
 }
 
 .ads-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px;
+    padding: 8px 12px; /* lebih pendek */
     color: #fff;
     cursor: pointer;
     font-weight: 600;
+    font-size: 13px;
 }
 
-.ads-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.ads-item {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.ads-item h4 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.ads-item p {
+    margin: 2px 0 0;
+    font-size: 11px;
+    opacity: .9;
 }
 
 .ads-dot {
@@ -519,6 +535,21 @@ body.sidebar-hidden .main-layout .sidebar {
 
 .ads-item:hover {
     background: rgba(255,255,255,.08);
+}
+
+.ads-text {
+    animation: adsTextBlink 1s infinite;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+    font-weight: 700;
+}
+
+@keyframes adsTextBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
 }
 
 .ads-item h4 {
