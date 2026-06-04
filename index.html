@@ -42,16 +42,24 @@
           </div>
 
           <div class="nav-section nav-right">
-            <button class="nav-button search-button" id="search-button">
-              <i class="uil uil-search"></i>
-            </button>
-            <button class="nav-button theme-button">
-              <i class="uil uil-moon"></i>
-            </button>
-            <img src="images/logo.png" alt="User Image" class="user-image" />
-          </div>
-        </nav>
-      </header>
+  <button class="nav-button search-button" id="search-button">
+    <i class="uil uil-search"></i>
+  </button>
+
+  <!-- Tombol Notifikasi -->
+  <button class="nav-button notification-button" id="notification-button">
+    <i class="uil uil-bell"></i>
+    <span class="notif-badge" id="notif-badge">1</span>
+  </button>
+
+  <button class="nav-button theme-button">
+    <i class="uil uil-moon"></i>
+  </button>
+
+  <img src="images/logo.png" alt="User Image" class="user-image" />
+</div>
+</nav>
+</header>
 
       <!-- Main Layout -->
       <main class="main-layout">
@@ -132,6 +140,18 @@
           </div>
 
           <!-- Video List -->
+          <div class="admin-panel">
+  <h3>📢 Kirim Notifikasi Admin</h3>
+
+  <textarea
+    id="admin-message"
+    placeholder="Tulis notifikasi untuk pengguna..."
+  ></textarea>
+
+  <button onclick="sendNotification()">
+    Kirim Notifikasi
+  </button>
+</div>
           <div class="video-list">
             <a href="https://indosatooredoo.com/id/personal/myim3/deeplink?action=carrieroffer&offerid=KUOTAPDP1GB_2_LTS" class="video-card">
               <div class="thumbnail-container">
@@ -235,6 +255,20 @@
         </div>
       </main>
     </div>
+    
+    <div id="notification-popup" class="notification-popup">
+  <div class="notification-content">
+    <h3>📢 Notifikasi Admin</h3>
+
+    <div id="notification-text">
+      Belum ada notifikasi.
+    </div>
+
+    <button onclick="closeNotification()">
+      Tutup
+    </button>
+  </div>
+</div>
 
     <!-- Linking custom script -->
     <script src="script.js"></script>

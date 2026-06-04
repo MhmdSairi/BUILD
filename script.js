@@ -44,3 +44,77 @@ const toggleSearchBar = () => {
 
 searchButton.addEventListener("click", toggleSearchBar);
 searchBackButton.addEventListener("click", () => searchButton.click());
+
+/* =========================
+   FITUR NOTIFIKASI ADMIN
+========================= */
+
+const notificationBtn =
+document.getElementById("notification-button");
+
+const notificationPopup =
+document.getElementById("notification-popup");
+
+const notificationText =
+document.getElementById("notification-text");
+
+const notifBadge =
+document.getElementById("notif-badge");
+
+if (notificationBtn) {
+
+  notificationBtn.addEventListener("click", () => {
+
+    const msg =
+      localStorage.getItem("adminNotification") ||
+      "Belum ada notifikasi";
+
+    if (notificationText) {
+      notificationText.innerHTML = msg;
+    }
+
+    if (notificationPopup) {
+      notificationPopup.style.display = "flex";
+    }
+
+    if (notifBadge) {
+      notifBadge.style.display = "none";
+    }
+  });
+
+}
+
+function closeNotification() {
+  if (notificationPopup) {
+    notificationPopup.style.display = "none";
+  }
+}
+
+function sendNotification() {
+
+  const messageInput =
+    document.getElementById("admin-message");
+
+  if (!messageInput) {
+    alert("Textarea admin-message tidak ditemukan");
+    return;
+  }
+
+  const msg = messageInput.value;
+
+  if (!msg.trim()) {
+    alert("Isi notifikasi terlebih dahulu");
+    return;
+  }
+
+  localStorage.setItem(
+    "adminNotification",
+    msg
+  );
+
+  if (notifBadge) {
+    notifBadge.style.display = "flex";
+  }
+
+  alert("Notifikasi berhasil dikirim");
+}
