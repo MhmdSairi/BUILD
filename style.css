@@ -468,26 +468,40 @@ body.sidebar-hidden .main-layout .sidebar {
 
 .ads-container {
     background: linear-gradient(135deg, #ff0000, #cc0000);
-    border-radius: 14px;
+    border-radius: 10px;
     overflow: hidden;
-    margin: 15px;
-    box-shadow: 0 4px 12px rgba(255,0,0,.3);
+    margin: 8px 16px; /* samakan dengan card video */
+    box-shadow: 0 2px 8px rgba(255,0,0,.25);
 }
 
 .ads-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px;
+    padding: 8px 12px; /* lebih pendek */
     color: #fff;
     cursor: pointer;
     font-weight: 600;
+    font-size: 13px;
 }
 
-.ads-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.ads-item {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.ads-item h4 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.ads-item p {
+    margin: 2px 0 0;
+    font-size: 11px;
+    opacity: .9;
 }
 
 .ads-dot {
