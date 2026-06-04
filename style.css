@@ -537,6 +537,21 @@ body.sidebar-hidden .main-layout .sidebar {
     background: rgba(255,255,255,.08);
 }
 
+.ads-text {
+    animation: adsTextBlink 1s infinite;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+    font-weight: 700;
+}
+
+@keyframes adsTextBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
 .ads-item h4 {
     margin: 0;
     font-size: 14px;
