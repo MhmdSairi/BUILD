@@ -24,6 +24,10 @@ if (localStorage.getItem("darkMode") === "enabled") {
   themeButton.classList.replace("uil-sun", "uil-moon");
 }
 
+function closeWelcomeAlert() {
+    document.getElementById("welcomeAlert").style.display = "none";
+}
+
 // Toggle dark mode when theme button is clicked
 themeButton.addEventListener("click", () => {
   const isDarkMode = document.body.classList.toggle("dark-mode");
