@@ -285,7 +285,7 @@ body.sidebar-hidden .main-layout .sidebar {
 }
 
 .content-wrapper .video-list .video-card .thumbnail {
-  width: 100%;
+  width: 140%;
   object-fit: contain;
   border-radius: 8px;
   aspect-ratio: 16 / 9;
