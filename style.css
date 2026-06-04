@@ -380,6 +380,45 @@ body.sidebar-hidden .main-layout .sidebar {
   margin: 4px 0 2px;
 }
 
+.hot-duration {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #ff0000;
+    color: #fff !important;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    animation: hotBlink 1s infinite;
+}
+
+.hot-duration .hot-dot {
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    animation: dotPulse 1s infinite;
+}
+
+@keyframes hotBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+}
+
 .notification-popup {
   display: none;
   position: fixed;
