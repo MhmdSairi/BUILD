@@ -468,9 +468,7 @@ body.sidebar-hidden .main-layout .sidebar {
 
 .ads-container {
     width: 100%;
-    max-width: 350px;
-    min-width: 350px;
-    margin: 10px auto;
+    margin: 8px 0;
     background: linear-gradient(135deg, #ff0000, #cc0000);
     border-radius: 10px;
     overflow: hidden;
