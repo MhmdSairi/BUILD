@@ -36,6 +36,13 @@ themeButton.addEventListener("click", () => {
   themeButton.classList.toggle("uil-moon", !isDarkMode);
 });
 
+let views = localStorage.getItem("aboutifyri_views") || 0;
+views++;
+localStorage.setItem("aboutifyri_views", views);
+
+document.getElementById("viewCount").textContent =
+  Number(views).toLocaleString();
+
 // Show sidebar on large screens by default
 if (window.innerWidth >= 768) {
   document.body.classList.remove("sidebar-hidden");
@@ -51,13 +58,6 @@ document.getElementById("viewCount").textContent = views;
 const toggleSearchBar = () => {
   document.body.classList.toggle("show-mobile-search");
 };
-
-let views = localStorage.getItem("aboutifyri_views") || 0;
-views++;
-localStorage.setItem("aboutifyri_views", views);
-
-document.getElementById("viewCount").textContent =
-  Number(views).toLocaleString();
 
 searchButton.addEventListener("click", toggleSearchBar);
 searchBackButton.addEventListener("click", () => searchButton.click());
