@@ -286,7 +286,7 @@ body.sidebar-hidden .main-layout .sidebar {
 
 .content-wrapper .video-list .video-card .thumbnail {
   width: 100%;
-  object-fit: contain;
+  object-fit: contain; /* <-- INI YANG HARUS DIGANTI */
   border-radius: 8px;
   aspect-ratio: 16 / 9;
   background: var(--light-white-color);
