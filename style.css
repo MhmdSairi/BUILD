@@ -320,6 +320,15 @@ body.sidebar-hidden .main-layout .sidebar {
   margin-right: 10px;
 }
 
+.copyright-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #909090;
+    user-select: none;
+}
+
 .sidebar .link-section .section-title {
   color: var(--black-color);
   font-weight: 600;
