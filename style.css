@@ -468,7 +468,8 @@ body.sidebar-hidden .main-layout .sidebar {
 
 .ads-container {
     width: 100%;
-    max-width: 420px; /* sesuaikan dengan lebar card video */
+    max-width: 350px;
+    min-width: 350px;
     margin: 10px auto;
     background: linear-gradient(135deg, #ff0000, #cc0000);
     border-radius: 10px;
