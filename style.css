@@ -505,29 +505,6 @@ body.sidebar-hidden .main-layout .sidebar {
   margin-bottom: 15px;
 }
 
-.site-footer {
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    font-size: 13px;
-    color: #888;
-}
-
-.footer-divider {
-    opacity: 0.5;
-}
-
-.footer-views {
-    font-weight: 500;
-}
-
 .notification-content button {
   margin-top: 15px;
   padding: 10px 20px;

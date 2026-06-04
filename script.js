@@ -36,23 +36,10 @@ themeButton.addEventListener("click", () => {
   themeButton.classList.toggle("uil-moon", !isDarkMode);
 });
 
-let views = localStorage.getItem("aboutifyri_views") || 0;
-views++;
-localStorage.setItem("aboutifyri_views", views);
-
-document.getElementById("viewCount").textContent =
-  Number(views).toLocaleString();
-
 // Show sidebar on large screens by default
 if (window.innerWidth >= 768) {
   document.body.classList.remove("sidebar-hidden");
 }
-
-let views = localStorage.getItem("aboutifyri_views") || 0;
-views++;
-localStorage.setItem("aboutifyri_views", views);
-
-document.getElementById("viewCount").textContent = views;
 
 // Toggle search bar on click on mobile
 const toggleSearchBar = () => {
