@@ -173,7 +173,7 @@ header,
 }
 
 .bottom-nav-item.active{
-    color: var(--primary-color);
+    color: var(--black-color);
 }
 
 .bottom-profile{
@@ -230,6 +230,18 @@ header,
 
 .dark-mode .create-btn:hover{
     background: #3a3a3a;
+}
+
+.bottom-nav-item,
+.bottom-nav-item i,
+.bottom-nav-item span{
+    color: var(--black-color);
+}
+
+.bottom-nav-item.active,
+.bottom-nav-item.active i,
+.bottom-nav-item.active span{
+    color: var(--black-color);
 }
 
 .welcome-alert-overlay {
