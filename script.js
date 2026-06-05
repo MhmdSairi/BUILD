@@ -41,6 +41,31 @@ if (window.innerWidth >= 768) {
   document.body.classList.remove("sidebar-hidden");
 }
 
+const buttons = document.querySelectorAll('.category-button');
+const categories = document.querySelectorAll('.category-content');
+
+buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        buttons.forEach(btn =>
+            btn.classList.remove('active')
+        );
+
+        button.classList.add('active');
+
+        categories.forEach(category => {
+            category.style.display = 'none';
+        });
+
+        document.getElementById(
+            button.dataset.category
+        ).style.display = 'grid';
+
+    });
+
+});
+
 // Toggle search bar on click on mobile
 const toggleSearchBar = () => {
   document.body.classList.toggle("show-mobile-search");
