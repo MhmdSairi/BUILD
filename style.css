@@ -141,73 +141,95 @@ header,
 /* Bottom Navigation */
 
 .bottom-nav{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:65px;
-    background:#0f0f0f;
-    border-top:1px solid rgba(255,255,255,.1);
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    z-index:99999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: var(--white-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99999;
+    transition: all .3s ease;
 }
 
 .bottom-nav-item{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:#fff;
-    font-size:11px;
-    gap:2px;
-    min-width:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 11px;
+    gap: 2px;
+    min-width: 50px;
+    transition: all .3s ease;
 }
 
 .bottom-nav-item i{
-    font-size:26px;
+    font-size: 24px;
 }
 
 .bottom-nav-item.active{
-    color:#fff;
+    color: var(--primary-color);
 }
 
 .bottom-profile{
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    object-fit:cover;
-    border:1px solid rgba(255,255,255,.2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
 }
 
-/* Tombol tengah */
+/* Tombol Tengah */
 
 .create-btn{
-    width:54px;
-    height:54px;
-    border-radius:50%;
-    background:#202020;
-    margin-top:-12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--light-white-color);
+    margin-top: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
 }
 
 .create-btn i{
-    font-size:34px;
+    font-size: 34px;
+    color: var(--black-color);
 }
 
 .create-btn:hover{
-    background:#2a2a2a;
+    background: var(--light-gray-color);
 }
 
-/* Supaya konten tidak ketutup navbar bawah */
+/* Efek saat diklik */
+
+.bottom-nav-item:active{
+    transform: scale(.95);
+}
+
+/* Supaya konten tidak ketutup navbar */
 
 .content-wrapper,
 .video-list{
-    padding-bottom:90px;
+    padding-bottom: 90px;
+}
+
+.dark-mode .bottom-nav{
+    box-shadow: 0 -1px 0 rgba(255,255,255,.08);
+}
+
+.dark-mode .create-btn{
+    background: #2a2a2a;
+}
+
+.dark-mode .create-btn:hover{
+    background: #3a3a3a;
 }
 
 .welcome-alert-overlay {
