@@ -71,6 +71,19 @@ document.addEventListener("selectstart", function(e) {
     e.preventDefault();
 });
 
+function countClick() {
+    let clicks = localStorage.getItem('indosat_clicks') || 0;
+    clicks++;
+    localStorage.setItem('indosat_clicks', clicks);
+}
+
+function loadClicks() {
+    let clicks = localStorage.getItem('indosat_clicks') || 0;
+    document.getElementById('liveCount').textContent = clicks;
+}
+
+loadClicks();
+
 // Blok beberapa shortcut umum
 document.addEventListener("keydown", function(e) {
 
