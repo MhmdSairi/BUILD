@@ -184,6 +184,23 @@ header,
     border: 1px solid var(--border-color);
 }
 
+.logo-text{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.premium-badge{
+    background: #ff0000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(255, 0, 0, 0.25);
+}
+
 /* Tombol Tengah */
 
 .create-btn{
