@@ -1,11 +1,22 @@
 /* Importing Google Font - Open Sans */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('fonts/ProductSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('fonts/ProductSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Product Sans", sans-serif;
 }
 
 /* Color variables for light theme */
