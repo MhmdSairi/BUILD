@@ -396,38 +396,6 @@
     </a>
 
 </div>
-<footer id="copyright-footer" class="copyright-footer">
-    Copyright Aboutifyri © 2026
-</footer>
-<script>
-(function () {
-
-    const hash = "Q29weXJpZ2h0IEFib3V0aWZ5cmkgwqkgMjAyNg==";
-
-    function verify() {
-
-        const text = document
-            .getElementById("copyright-footer")
-            .innerText
-            .trim();
-
-        const currentHash = btoa(text);
-
-        if(currentHash !== hash){
-
-            document.body.innerHTML = "";
-
-            alert("License Error!");
-
-            location.href = "about:blank";
-        }
-    }
-
-    verify();
-    setInterval(verify, 1000);
-
-})();
-</script>
     <!-- Linking custom script -->
     <script src="script.js"></script>
   </body>
