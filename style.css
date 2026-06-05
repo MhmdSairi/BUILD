@@ -32,17 +32,6 @@
 
 body {
   background: var(--white-color);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-img {
-    pointer-events: none;
-    -webkit-user-drag: none;
-    user-drag: none;
-    -webkit-touch-callout: none;
 }
 
 .container {
@@ -510,45 +499,6 @@ body.sidebar-hidden .main-layout .sidebar {
   z-index: 9999;
   justify-content: center;
   align-items: center;
-}
-
-.hot-duration {
-    background: #ff0000;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    animation: pulseLive 1s infinite;
-}
-
-.hot-dot {
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 5px;
-    animation: blinkDot 0.8s infinite;
-}
-
-@keyframes pulseLive {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 5px red;
-    }
-    50% {
-        transform: scale(1.08);
-        box-shadow: 0 0 15px red;
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 5px red;
-    }
-}
-
-@keyframes blinkDot {
-    0%,100% {opacity:1;}
-    50% {opacity:0.3;}
 }
 
 .notification-content {
