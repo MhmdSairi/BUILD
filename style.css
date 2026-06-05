@@ -191,17 +191,15 @@ header,
     height: 54px;
     border-radius: 50%;
     background: var(--light-white-color);
-    margin-top: -12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease;
+    margin-top: -4px; /* sebelumnya -12px */
 }
 
 .create-btn i{
     font-size: 34px;
-    line-height: 1;
-    transform: translateY(2px);
+    color: var(--black-color);
 }
 
 .create-btn:hover{
